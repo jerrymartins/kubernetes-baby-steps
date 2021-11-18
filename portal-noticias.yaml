@@ -4,11 +4,14 @@ metadata:
   name: portal-noticias
   labels:
     name: alura
+    app: portal-noticias-pod
 spec:
   containers:
-  - name: portal-noticias-container
+  - name: container-portal-noticias
     image: aluracursos/portal-noticias:1
     resources:
       limits:
         memory: "128Mi"
         cpu: "500m"
+    ports:
+     - containerPort: 80
